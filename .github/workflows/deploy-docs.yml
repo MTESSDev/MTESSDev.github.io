@@ -10,17 +10,17 @@ permissions:
   contents: read
 
 jobs:
-#  correct_repository:
-#    permissions:
-#      contents: none
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: fail on fork
-#        if: github.repository_owner != 'chartjs'
-#        run: exit 1
+  correct_repository:
+    permissions:
+      contents: none
+    runs-on: ubuntu-latest
+    steps:
+      - name: fail on fork
+        if: github.repository_owner != 'chartjs'
+        run: exit 1
 
   build:
-    #needs: correct_repository
+    needs: correct_repository
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
