@@ -40,9 +40,7 @@
     "out": "./dist/docs/typedoc"
   },
   "include": [
-    "./src/**/*"
   ],
   "exclude": [
-    "./dist/**"
   ]
 }
