@@ -8,7 +8,7 @@ const base: `/${string}/` = process.env.NODE_ENV === "development" ? '/docs/mast
 export default defineConfig({
   title: 'Chart.js',
   description: 'Open source HTML5 Charts for your website',
-  theme: 'default',
+  /*theme: 'default',*/
   base,
   dest: path.resolve(__dirname, '../../dist/docs'),
   head: [
