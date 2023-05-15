@@ -16453,7 +16453,7 @@ packages:
   /vuepress-theme-chartjs/0.2.0_vue@2.7.14:
     resolution: {integrity: sha512-OE9fdPN/bV+SM6dGIjM4nUSEzvHHbQlIriJi4bdVvlSDufgXkkfUbbu+aDqx/a7n7wrqWaTQox73KZX5FFY7rw==}
     peerDependencies:
-      chart.js: '>= 2'
+      #chart.js: '>= 2'
     peerDependenciesMeta:
       chart.js:
         optional: true
