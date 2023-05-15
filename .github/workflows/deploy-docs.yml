@@ -22,6 +22,9 @@ jobs:
   build:
     #needs: correct_repository
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./docs
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2.2.4
@@ -34,10 +37,10 @@ jobs:
         run: |
           pnpm install
           pnpm run build
-          ./scripts/docs-config.sh "master"
+          ./scripts/docs-config.sh "main"
           pnpm run docs
           pnpm pack
-          ./scripts/deploy-docs.sh "master"
+          ./scripts/deploy-docs.sh "main"
         env:
           GITHUB_TOKEN: ${{ secrets.GH_AUTH_TOKEN }}
           GH_AUTH_EMAIL: ${{ secrets.GH_AUTH_EMAIL }}
