@@ -33,12 +33,6 @@ export default defineConfig({
       ],
     }],
     ['vuepress-plugin-code-copy', true],
-    ['vuepress-plugin-typedoc', {
-        entryPoints: ['../../src/types/index.d.ts'],
-        hideInPageTOC: true,
-        tsconfig: path.resolve(__dirname, '../../tsconfig.json'),
-      },
-    ],
     ['@simonbrunel/vuepress-plugin-versions', {
       filters: {
         suffix: (tag) => tag ? ` (${tag})` : '',
